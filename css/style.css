@@ -1,0 +1,338 @@
+/* ============================= */
+/* CSS Reset */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* Global Styles */
+/* ============================= */
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: linear-gradient(to right, #000000, #1a1a1a); /* gradient from black to dark gray */
+    color: #DFDEDC;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* Links */
+/* ============================= */
+a {
+    text-decoration: none;
+    color: #00ACAC;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #A6A7A2;
+    text-decoration: underline;
+}
+.nav-links a.active {
+    color: #00ACAC;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* Header / Hero Section */
+/* ============================= */
+.hero-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+}
+
+.hero-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-header .subheading {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #DFDEDC;
+    margin-bottom: 1.5rem;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+/* Optional CTA button below hero */
+.cta-button {
+    display: inline-block;
+    background-color: #00ACAC;
+    color: #000;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.cta-button:hover {
+    background-color: #A6A7A2;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
+nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* ============================= */
+/* Container for consistent content width */
+/* ============================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================= */
+/* Feature Cover Image */
+/* ============================= */
+.feature-cover figure {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+}
+
+.feature-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.feature-cover img:hover {
+    transform: scale(1.05);
+}
+.feature-cover figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+/* ============================= */
+/* Featured Technologies Grid */
+/* ============================= */
+.featured {
+    padding: 2rem 0;
+}
+.featured h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (max-width: 1024px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+.tech-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.tech-card figure {
+    margin-bottom: 0.5rem;
+}
+.tech-card img {
+    width: auto;
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+.tech-card h3 {
+    margin: 0.5rem 0;
+}
+.tech-card p {
+    font-size: 0.95rem;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #00ACAC;
+    font-weight: bold;
+}
+.read-more:hover {
+    color: #A6A7A2;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* AI / IoT / Quantum Content Two-Column Layouts */
+/* ============================= */
+.ai-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.ai-text {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.ai-text h2,
+.ai-text h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+}
+.ai-image figure {
+    margin: 0;
+}
+.ai-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.ai-image img:hover {
+    transform: scale(1.03);
+}
+.ai-image figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #DFDEDC;
+}
+
+/* Add consistent padding inside ai-text to avoid hugging edges */
+.ai-text {
+    padding-right: 1rem;
+}
+
+/* ============================= */
+/* Robotics Grid Layout */
+/* ============================= */
+.robotics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+.robotics-grid figure {
+    background-color: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.robotics-grid figure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+.robotics-grid img {
+    width: auto;
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+}
+.robotics-grid figcaption {
+    font-size: 0.9rem;
+    color: #DFDEDC;
+}
+
+/* ============================= */
+/* Quantum Reflective Text */
+/* ============================= */
+.quantum-reflective {
+    margin-top: 3rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #DFDEDC;
+    line-height: 1.8;
+    padding: 0 1rem;
+}
+
+/* ============================= */
+/* Media Queries - Mobile View */
+/* ============================= */
+@media (max-width: 768px) {
+    .ai-content,
+    .robotics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-image img {
+        max-height: 300px;
+    }
+
+    .robotics-grid img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .hero-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-header .subheading {
+        font-size: 1rem;
+    }
+
+    .ai-text {
+        padding-right: 0; /* remove padding on mobile for full width */
+    }
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* ============================= */
+/* Utility / Enhancements */
+/* ============================= */
